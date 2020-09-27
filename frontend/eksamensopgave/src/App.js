@@ -1,13 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <h2>
+          Home
+        </h2>
 
       </header>
     </div>
