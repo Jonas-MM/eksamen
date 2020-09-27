@@ -21,12 +21,12 @@ function Header() {
         <header>
                 <nav className="container-fluid navbarCon ">
                 <Row>
-                    <div className="col-12">
+                    <div className="col-12 px-5">
                         <Navbar id="navbar" bg="none" expand="lg" className="px-0">
                         <Navbar.Brand href="/" id="brand">
-                            <NavLink to="/">
-                                <h1 className="text-dark px-3">Eksamensopgave</h1>
-                            </NavLink>                    
+                            {/* <NavLink to="/"> */}
+                                <h1 className="text-dark">Eksamensopgave</h1>
+                            {/* </NavLink>                     */}
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                             <Navbar.Collapse id="basic-navbar-nav">
@@ -45,7 +45,7 @@ function Header() {
                                             <NavLink to="/side4" className="text-dark px-3">Side4</NavLink>
                                         </li>
                                         <li>
-                                            <NavLink to="/side5" className="text-dark px-3">Side5</NavLink>
+                                            <NavLink to="/side5" className="text-dark pl-3">Side5</NavLink>
                                         </li>
                                     </ul>
                                 </Nav>

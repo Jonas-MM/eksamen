@@ -5,3 +5,15 @@ ul li {
 #brand a{
     text-decoration: none;
 }
+
+
+
+@media only screen and (max-width: 900px) {
+    .navbarCon h1{
+        font-size: 1.2em;
+    }
+    .navbarCon ul {
+      display: block !important;
+      margin: 0 auto;
+    }
+  }
