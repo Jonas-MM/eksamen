@@ -18,17 +18,17 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        {/* <Home /> */}
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/produkter" component={Prpdukter} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
-          {/* <Route path="/side4" component={Side4} /> */}
+          <Route path="/Rediger" component={Rediger} />
           <Route path="/kontakt" component={Kontakt} />
           <Route path="/:id" component={SpecificProduct} />
         </Switch>
+        <Footer />
       </div>
     </BrowserRouter>
   );
