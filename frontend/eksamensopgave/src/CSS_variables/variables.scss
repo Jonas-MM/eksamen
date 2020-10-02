@@ -1,0 +1,47 @@
+:root {
+    --mainbgr-color: #fafafa;
+    --maindark-color: #333333;
+    --secondarydark-color: #252525;
+    --darkblue-color: #617685;
+    --lightblue-color: #698ba6;
+    --muted-color: rgb(141, 141, 141);
+  }
+
+
+  button{
+    background-color: var(--mainbgr-color);
+    border: 1px solid;
+    outline:none;
+    box-shadow: none;
+    border-color: var(--darkblue-color);
+    padding: 5px 65px;
+    min-width: 100px;
+    letter-spacing: 2px;
+    a{
+        display: block;
+        width: 100% !important;
+        height: 100% !important;
+        color: black;
+    }
+    &:focus{
+      outline: none;
+    }
+  }
+
+
+  .lobster{
+    font-family: 'Lobster', cursive;
+  }
+  .faded {
+    color: var(--muted-color) !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 2em;
+    font-size: small;
+    padding: 0 20px;
+    text-align: center;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+  

@@ -1,6 +1,16 @@
+/* @import "./CSS_variables/variables.scss"; */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400;600&display=swap');
+
+
+
 .App {
   text-align: center;
+  background-color: green;
+  font-family: 'Open Sans', sans-serif !important;
+
+
 }
+
 
 .App-logo {
   height: 40vmin;

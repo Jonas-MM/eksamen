@@ -1,0 +1,40 @@
+@import "../../../../CSS_variables/variables.scss";
+
+#newest8{
+    h5{
+        font-weight: 600;
+        padding: 0px 5px;
+        letter-spacing: 1px;
+        font-size: .9em;
+        text-transform: uppercase;
+        height: 50px;
+    }
+    .teaserTxt{
+        height: 70px;
+    }
+    img{
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+    button{
+        width: 85%;
+        background-color: var(--mainbgr-color);
+        border: 1px solid;
+        box-shadow: none;
+        border-color: var(--darkblue-color);
+        padding: 5px 0px;
+        letter-spacing: 2px;
+        a{
+            display: block;
+            width: 100% !important;
+            height: 100% !important;
+            color: black;
+        }
+    }
+
+    .comment img{
+        width: 15px;
+        height: 15px;
+    }
+}

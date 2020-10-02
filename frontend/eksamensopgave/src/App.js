@@ -4,16 +4,17 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 
+
 //navbar
 import Navbar from './components/Navbar/Navbar';
 
 //pages
-import Home from './components/Pages/Home';
-import Side1 from './components/Pages/Side1';
-import Side2 from './components/Pages/Side2';
-import Side3 from './components/Pages/Side3';
-import Side4 from './components/Pages/Side4';
-import Side5 from './components/Pages/Side5';
+import Home from './components/Pages/Home/Home';
+import SpecificProduct from './components/Pages/SpecificProduct/SpecificProduct';
+import Prpdukter from './components/Pages/Produkter/Produkter';
+import Login from './components/Pages/Login/Login';
+import Register from './components/Pages/Login/Register';
+import Kontakt from './components/Pages/Kontakt/Kontakt';
 
 function App() {
   return (
@@ -23,11 +24,12 @@ function App() {
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/side1" component={Side1} />
-            <Route path="/side2" component={Side2} />
-            <Route path="/side3" component={Side3} />
-            <Route path="/side4" component={Side4} />
-            <Route path="/side5" component={Side5} />
+            <Route path="/produkter" component={Prpdukter} />
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+            {/* <Route path="/side4" component={Side4} /> */}
+            <Route path="/kontakt" component={Kontakt} />
+            <Route path="/:id" component={SpecificProduct} />
           </Switch>
         </div>
       </BrowserRouter>

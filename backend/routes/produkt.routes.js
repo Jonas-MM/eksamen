@@ -60,7 +60,7 @@ router.get('/antal/:antal', async (req, res) => {
 
     try {
         //const produkter = await Produkt.find().sort([['oprettet', -1]]).limit(antal);
-        const produkter = await Produkt.find({}, 'titel teaser image pris oprettet').sort([['oprettet', -1]]).limit(antal);
+        const produkter = await Produkt.find({}, 'titel teaser image pris oprettet kommentar').sort([['oprettet', -1]]).limit(antal);
         res.json(produkter);
         console.log(produkter.length)
 

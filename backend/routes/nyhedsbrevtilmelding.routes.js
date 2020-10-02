@@ -1,10 +1,69 @@
 const Nyhedsbrevtilmelding = require('../models/nyhedsbrevtilmelding.model');
 
 const express = require('express');
-const formData = require('express-form-data');             
+const formData = require('express-form-data');
+
+// const bodyParser = require('body-parser');
+// const path = require('path');
+// const fetch = require('node-fetch');          
 
 const router = express.Router();
-router.use(formData.parse());                    
+router.use(formData.parse());     
+
+
+
+
+
+
+// // Bodyparser Middleware
+// router.use(bodyParser.urlencoded({ extended: true }));
+
+// // // Static folder
+// router.use(express.static(path.join(__dirname, 'public')));
+
+// // Signup Route
+// router.post('/', (req, res) => {
+//     // console.log(req.body);
+//     // res.send("hello");
+//   const {  email } = req.body;
+
+// //   Make sure fields are filled
+//   if (!email) {
+//     res.redirect('/fail.html');
+//     return;
+//   }
+
+
+// //   Construct req data
+//   const data = {
+//     members: [
+//       { 
+//         email_address: email,
+//         status: 'subscribed',
+//       }
+//     ]
+//   };
+
+//   const postData = JSON.stringify(data);
+
+//   fetch('https://server.api.mailchimp.com/3.0/lists/f204245a94?skip_merge_validation=true&skip_duplicate_check=true', {
+    
+      
+//     method: 'POST',
+//     headers: {
+//       Authorization: 'auth db52e45ea2a0100314cd69f1cbbafeaa-us19'
+//     },
+//     body: postData
+//   })
+//     .then(res.statusCode === 200 ?
+//       res.redirect('/success.html') :
+//       res.redirect('/fail.html'))
+//     .catch(err => console.log(err))
+// })
+
+
+
+
 
 
 
@@ -51,7 +110,7 @@ router.post('/', async (req, res) => {
     
     if (tilmelding) {
         
-        return res.status(201).json({ message: "Bruger findes allerede (OBS - denne besked skal laves om - GDPR!)" })
+        return res.status(201).json({ message: "Nok bare en tastefejl. Prøv igen, eller brug en anden email" })
         
     } 
 

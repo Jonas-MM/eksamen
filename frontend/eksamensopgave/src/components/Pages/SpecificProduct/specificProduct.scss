@@ -1,0 +1,145 @@
+// @import "../../../CSS_variables/variables.scss";
+
+.history{
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+}
+
+.heartImg{
+    width: 17px;
+    height: 17px;
+}
+.kommentarImg{
+    width: 17px;
+    height: 17px;
+}
+
+.ingrediensBox{
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    margin: 2px 0;
+}
+
+#specificProduct{
+    .productimage{
+        float: left;
+        height: 200px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+    }
+    .beskrivelse{
+        color: var(--muted-color) !important;
+        line-height: 2.5em;
+        font-size: .9em;
+        // padding: 0 20px;
+        // text-align: left;
+        // overflow-wrap: break-word;
+    }
+}
+
+
+
+.kommentarCon{
+    input{
+
+    }
+    button{
+        background-color: var(--darkblue-color);
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        text-align: ce;
+    }
+    .postKommentar{
+        background-color: var(--mainbgr-color);
+        box-shadow: none;
+        div{
+            height: 53px;
+            background-color: white;
+            -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.1);
+            -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.1);
+            box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.1);
+        }
+        img{
+            width: 25px;
+            height: 25px;
+            margin: 0 auto;
+            align-self: center;
+        }
+
+        input{
+            outline: none;
+            border: none;
+        }
+        
+    }
+}
+
+.kommentarBox{
+    background-color: var(--mainbgr-color);
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.1);
+    li{
+        position: relative;
+        -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.1);
+        box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.1);
+        &:hover img{
+            // background-color: var(--darkblue-color);
+            // color: white;
+            font-weight: 600;
+            display: block;
+
+        }
+    }
+    h3{
+        font-size: 1.2em;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+    h6{
+        font-size: 1em;
+        color: var(--muted-color);
+        padding-bottom: 0.5em;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+    p{
+        font-size: .7em;
+        color: var(--muted-color);
+        margin-bottom: 0;
+    }
+    img{
+        padding: 1em;
+        width: 55px;
+        height: 55px;
+        display: none;
+        position: absolute; 
+        right: 5%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.loginCon{
+    a{
+        display: block;
+        text-align: center;
+        padding: .5em 0;
+        color: white;
+        font-size: 1.2em;
+        background-color: var(--darkblue-color);
+        height: 100% !important;
+        width: 100% !important;
+    }
+}

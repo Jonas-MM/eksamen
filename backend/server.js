@@ -63,6 +63,7 @@ app.get('/', async (req, res) => {
 // app.use('*/admin*', async (req, res, next) => {
 
 //     if (req.session && req.session.userID) {
+//         console.log(req.session);
 //         return next()
 //     } else {
 //         return res.status(401).json({ message: 'Du har ikke adgang - du skal være logget ind' }) //route

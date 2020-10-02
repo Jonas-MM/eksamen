@@ -1,0 +1,12 @@
+.katBtn{
+    font-weight: 300;
+    color: var(--muted-color);
+    border: none !important;
+    outline: none !important;
+
+    &:focus {
+        color: black;
+        font-weight: 700;
+    }
+
+}
