@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 
-// import axios from "axios"
 
 //css
 import "../style/latest.scss"
@@ -20,14 +19,14 @@ function Latest (){
             return response.json();
           })
           .then(function (data) {
-            //   console.log(data)
-            //   arr.push(data);
               setNyheder(data.slice(0, 3))
           })
           .catch((error) => {
             console.error("Error:", error);
           });
+
       }, []);
+      
     const latestOutout = nyheder.map((nyhed, i) => {
         return(
             <div className="col-lg-4 col-sm-12 col-md-6 text-center my-5" key={i}>

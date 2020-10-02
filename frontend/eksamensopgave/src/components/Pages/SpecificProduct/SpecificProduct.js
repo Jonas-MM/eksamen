@@ -25,10 +25,8 @@ const SpecificProduct = (props) => {
     const [kategori, setKategori] = useState("");
     const [ingredienser, setIngredienser] = useState([]);
     const [liked, setLiked] = useState(false);
-
     
     const [likes, setLikes] = useState("");
-
 
     const [bruger, setBruger] = useState({});
     const [loggedin, setLoggedin] = useState(false);
@@ -48,7 +46,7 @@ const SpecificProduct = (props) => {
     //amount of comments
     const [length, setLength] = useState();
 
-    //for pagination (comments) ////////////
+    //for pagination (comments)
     const [comments, setComments] = useState([]);
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
@@ -62,7 +60,6 @@ const SpecificProduct = (props) => {
     // Change page
         const paginate = pageNumber => setCurrentPage(pageNumber);
 
-    /////////////
 
 
 
@@ -82,7 +79,6 @@ const SpecificProduct = (props) => {
         fetchData();
         let userData = localStorage.getItem("bruger"); 
         userData = JSON.parse(userData); 
-        // console.log(userData)
         if(userData != null){    
             setLoggedin(userData.data.login_godkendt);
             setBruger(userData.data);
@@ -90,10 +86,8 @@ const SpecificProduct = (props) => {
         }, [product._id]);
 
 
-        // console.log(product)
         function fetchData(){
             setLoading(true);
-
             fetch(API_Call)
             .then(function (response) {
             return response.json();
@@ -101,12 +95,8 @@ const SpecificProduct = (props) => {
             .then(function (data) {
             setProduct(data)
             setKategori(data.kategori)
-            // setKommentar(data.kommentar);
-
             setComments(data.kommentar);
             setLoading(false);
-
-
             setIngredienser(data.ingredienser)
             setLength(data.kommentar.length)
             setLikes(data.likes)
@@ -115,17 +105,6 @@ const SpecificProduct = (props) => {
             console.error("Error:", error);
             });
          }
-
-      
-
-        // console.log(length);       
-        // console.log(likes);
-        // console.log(product);
-        // console.log(kommentar);
-        // console.log(ingredienser);
-        // console.log(kategori);
-        console.log(comments);
-
 
     const ingredienserOutput = ingredienser.map((item, i) => {
         return(
@@ -143,9 +122,9 @@ const SpecificProduct = (props) => {
     }
     function handleHoverLeave(){
         if (liked){
-            $(".likeBtn").html("Like " + '<img src="../../../Images/heartFilled.png" alt="" class="heartImg my-auto"/>');
+            $(".likeBtn").html("Like " + '<img src="./Images/heartFilled.png" alt="" class="heartImg my-auto"/>');
         } else {
-            $(".likeBtn").html("Like " + '<img src="../../../Images/heart.png" alt="" class="heartImg my-auto"/>');
+            $(".likeBtn").html("Like " + '<img src="./Images/heart.png" alt="" class="heartImg my-auto"/>');
         }
     }
 
@@ -169,8 +148,6 @@ const SpecificProduct = (props) => {
 
 
     }
-    // console.log(commentPostData);
-
 
     //post kommentar
     function handleSubmit(e){
@@ -185,15 +162,7 @@ const SpecificProduct = (props) => {
         .catch(function (error) {
             console.log(error);
         });
-        
-
     }
-
-
-
-    // console.log(comments)
-
-
 
     return ( 
         <div className="container px-5 w-lg-50" id="specificProduct">
@@ -268,24 +237,19 @@ const SpecificProduct = (props) => {
                 )
                 :
                 (
-
                     <div className="loginCon">
                         <div className="col-lg-12 d-flex justify-content-between  p-0 my-2 history">
                             <div className="col-9 d-flex pl-4 align-center my-auto">
                                 <h6 className="m-0">Du skal være logget ind for at skrive en kommentar</h6>
                             </div>
                             <div className="col p-0 m-0 ">
-                                {/* <button type="submit" className=""> <Link to="/login" className="text-white py-2" >Login her</Link> </button> */}
                                 <Link to="/login">Login her</Link>
                             </div>
                         </div>
                     </div>
-
                 )
                 }
             </div>
-            {/* {kommentarOutput} */}
-            
             <Comments comments={currentComments} loading={loading} bruger={bruger} />
             <Pagination
                 CommentsPerPage={commentsPerPage}

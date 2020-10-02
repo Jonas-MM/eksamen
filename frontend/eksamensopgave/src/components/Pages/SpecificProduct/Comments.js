@@ -5,7 +5,6 @@ import $ from "jquery"
 
 const Comments = ({ comments, loading, bruger }) => {
 
-  const [commentPostData, setCommentPostData] = useState({});
   const [commentPutData, setCommentPutData] = useState({});
   const [brugerID, setBrugerID] = useState("");
   const [loggedIn, setLoggedin] = useState(false);
@@ -14,10 +13,8 @@ const Comments = ({ comments, loading, bruger }) => {
 
 
   useEffect(() => {
-    // fetchData();
     let userData = localStorage.getItem("bruger"); 
     userData = JSON.parse(userData); 
-    // console.log(userData)
     if(userData != null){    
         setLoggedin(userData.data.login_godkendt);
         setBrugerID(userData.data.bruger_id);

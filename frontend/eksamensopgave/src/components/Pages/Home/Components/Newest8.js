@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react"
-
 import { Link } from "react-router-dom";
-
-// import axios from "axios"    
 
 //css
 import "../style/newest8.scss"
@@ -20,7 +17,6 @@ function Newest8() {
             return response.json();
           })
           .then(function (data) {
-            //   console.log(data)
               setNewest(data);
           })
           .catch((error) => {
@@ -50,11 +46,7 @@ function Newest8() {
       
       var arr = newest;
       shuffle(arr);
-    //   console.log(arr);
-    //   console.log(newest);
 
-
-    // console.log(newest)
       const newestOutput = newest.map((card, i) => {
         return(
             <div className="col-lg-3 d-table col-md-6 my-5 d-table-cell" key={i}>

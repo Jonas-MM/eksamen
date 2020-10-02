@@ -10,7 +10,7 @@ function Kontakt () {
 
     const [fejl, setFejl] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
-    const [message, setMessage] = useState("test")
+    const [message, setMessage] = useState("")
     
 
     function handleSubmit(e){

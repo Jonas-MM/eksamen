@@ -3,9 +3,6 @@ import emailjs from "emailjs-com"
 import axios from "axios";
 
 
-//components
-
-
 //scss
 import "../style/nyhedsbrev.scss"
 
@@ -16,10 +13,7 @@ function Nyhedsbrev(props) {
     const [email, setEmail] = useState({});
     const [message, setMessage] = useState("");
 
-
-
       const handlesubmit = (e) => {
-
         emailjs.sendForm('service_h7o4rqz', 'template_va537ra', e.target, 'user_YNodEtdGCNSrfo4BKYo3k')
       .then((result) => {
           console.log(result.text);
@@ -34,8 +28,6 @@ function Nyhedsbrev(props) {
             console.log(res.data);
             setIsOpen(true);
             setMessage(res.data.message);
-            // alert("Tak for din tilmelding");
-            // history.push("/jokeadmin");
           })
           .catch((error) => {
             console.log(error);

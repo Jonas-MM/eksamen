@@ -13,8 +13,6 @@ function Register () {
     const [bruger, setBruger] = useState({});
     const [message, setMessage] = useState("");
 
-
-
     function handleSubmit(e){
         e.preventDefault();
 
@@ -23,11 +21,6 @@ function Register () {
             'Authorization': bruger._id
           }
           
-        // var data = {
-        //     "email": email,
-        //     "password": password
-        // }
-        
         axios.post("http://localhost:5033/bruger", bruger, {
 
             headers: headers
@@ -47,10 +40,7 @@ function Register () {
         
         
     } 
-    // function console(){
 
-    // }
-    // console.log(localStorage.getItem("bruger"))
     return ( 
         <div className="container-fuild d-flex">
             <div className="main mx-auto w-lg-25">

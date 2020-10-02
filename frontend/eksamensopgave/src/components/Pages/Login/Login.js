@@ -1,42 +1,31 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom";
-
+import axios from "axios";
 
 //scss 
 import "./login.scss";
-
-
-import axios from "axios";
 
 
 function Login () {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     
-    
     const [bruger, setBruger] = useState({});
-
-    // console.log(bruger)
-    
     const [message, setMessage] = useState("");
 
 
 
     function handleSubmit(e){
         e.preventDefault();
-
         const headers = {
             'Content-Type': 'application/json',
             'Authorization': bruger._id
           }
-          
         var data = {
             "email": email,
             "password": password
         }
-        
         axios.post("http://localhost:5033/login/login", data, {
-
             headers: headers
         })
         .then(res =>{
@@ -53,13 +42,8 @@ function Login () {
             setMessage("Ugyldig login")
 
         })
-        
-        
     } 
-    // function console(){
 
-    // }
-    // console.log(localStorage.getItem("bruger"))
     return ( 
         <div className="container-fuild d-flex">
             <div className="main mx-auto">

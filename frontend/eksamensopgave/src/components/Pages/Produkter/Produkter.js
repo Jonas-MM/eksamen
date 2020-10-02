@@ -2,9 +2,6 @@ import React, { useState, useEffect } from "react"
 
 import { Link } from "react-router-dom";
 
-
-import $ from "jquery";
-
 import "./produkter.scss";
 
 
@@ -12,7 +9,6 @@ function Produkter () {
     const [produkter, setProdukter] = useState([]); 
     const [kategorier, setKategorier] = useState([]);
     const [overskrift, setOverskrift] = useState("Kager");
-    
     const [defaultArr, setDefaultArr] = useState([]);
 
 
@@ -93,9 +89,7 @@ function Produkter () {
                 </div>
             </div>
         )
-
       })
-
 
     return ( 
         <div className="container w-lg-50 mt-5" id="produkter">
