@@ -213,13 +213,13 @@ const SpecificProduct = (props) => {
                 </div>
             </div>
             <div className="row my-5">
-                <div className="col-8 d-block">
-                    <div className="col-4 productimage pl-0">
+                <div className="col-lg-8 d-block">
+                    <div className="col-lg-4 productimage pl-0">
                         <img src={imgpath + product.image} alt="productimage"/>
                     </div>
                     <p className="beskrivelse">{product.beskrivelse}</p>
                 </div>
-                <div className="col-4">
+                <div className="col-lg-4">
                     <div className="col-12 m-0 p-0 text-left mb-4">
                         <h5>Ingredienser</h5>
                     </div>
@@ -243,20 +243,26 @@ const SpecificProduct = (props) => {
                     <div className="row">
                         <div className="col-12 d-flex    pl-0 ">
                             <img src={imgpath + "pen.png"} alt="" className="mx-4"/>
-                            <input type="text" placeholder="Overskrift..." className="w-100 text-muted p-0" 
+                            <input type="text" placeholder="Overskrift..." className=" text-muted p-0" 
                             onChange={(e) => setKommentarPOST({ ...kommentarPOST, titel: e.target.value}) } />
                         </div>
                     </div>
 
                     <div className="row mt-2">
-                        <div className="col-9 d-flex pl-0 ">
+                        <div className="col-lg-8 d-flex pl-0 ">
                             <img src={imgpath + "pen.png"} alt="" className="mx-4"/>
-                            <input type="text" placeholder="Kommentar..." className="w-100 text-muted p-0"
+                            <input type="text" placeholder="Kommentar..." className="text-muted p-0"
                             onChange={(e) => setKommentarPOST({ ...kommentarPOST, kommentaren: e.target.value}) }/>
                         </div>
-                        <div className="col-3 p-0">
+                        <div className="col-lg-4 p-0 text-right d-none d-lg-block">
                             <button type="submit">Indsæt</button>
                         </div>
+                    </div>
+                    <div className="row mt.2 d-lg-none">
+                        <div className="col-12 m-0 p-0">
+                            <button type="submit"className="w-100" >Indsæt</button>
+                        </div>
+
                     </div>
                 </form>
                 )

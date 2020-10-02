@@ -96,42 +96,18 @@ function Produkter () {
 
       })
 
-      
-
-
-
-
-
-
-    // function handleHoverEnter(){
-    //     $(".test").html(produkter.likes + " Likes");
-    // }
-    // function handleHoverLeave(){
-    //     if (liked){
-    //         $(".productImg").html("Like " + '<img src="../../../Images/heartFilled.png" alt="" class="heartImg my-auto"/>');
-    //     } else {
-    //         $(".productImg").html("Like " + '<img src="../../../Images/heart.png" alt="" class="heartImg my-auto"/>');
-    //     }
-    // }
-
-
-
-
-
-
-
 
     return ( 
-        <div className="container w-lg-50 mt-5" id="newest8">
+        <div className="container w-lg-50 mt-5" id="produkter">
             <div className="row">
                 <div className="col-12 text-center mb-5">
                     <h4 className="lobster">Vores elskede bagværk</h4>
                     <p className="faded mx-5 mt-4">Der er mange tilgængelige udgaver af lorem ipsum, men de fleste udgaver har gennemgået forandringer, når nogen har tilføjet humor eller tilfældige ord, som på ingen måde ser ægte ud</p>
                 </div>
-                <ul className="col-4 mt-5">
+                <ul className="col-lg-4 mt-5">
                     {kategoriOutput}
                 </ul>
-                <div className="col-8 d-flex flex-wrap d-table">
+                <div className="col-lg-8 d-flex flex-wrap d-table">
                     <div className="col-12">
                         <h4>{overskrift}</h4>
                     </div>
