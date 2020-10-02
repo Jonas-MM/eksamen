@@ -1,0 +1,24 @@
+.footer{
+    position: relative;
+    background-color: var(--maindark-color);
+    color: whitesmoke;
+    margin-top: 7.5vh;
+    .arrowToTop {
+        position: absolute;
+        left: 50%;
+        top: -5%;
+        transform: translate(-50%, -50%);
+        img{
+            transform: rotate(180deg);
+            background-color: whitesmoke;
+            border-radius: 50%;
+            padding: 5px;
+            width: height;
+            height: 45px;
+        }
+    }
+    .copyright{
+        font-size: .7em;
+        background-color: var(--secondarydark-color);
+    }
+}

@@ -2,7 +2,9 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@300;400;600&display=swap');
-
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: var(--mainbgr-color) !important;

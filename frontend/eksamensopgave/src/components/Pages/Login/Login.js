@@ -52,7 +52,7 @@ function Login () {
             console.log(err);
             setMessage("Ugyldig login")
 
-        });
+        })
         
         
     } 

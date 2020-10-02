@@ -124,7 +124,7 @@ const SpecificProduct = (props) => {
         // console.log(kommentar);
         // console.log(ingredienser);
         // console.log(kategori);
-        // console.log(comments);
+        console.log(comments);
 
 
     const ingredienserOutput = ingredienser.map((item, i) => {
@@ -169,6 +169,7 @@ const SpecificProduct = (props) => {
 
 
     }
+    // console.log(commentPostData);
 
 
     //post kommentar

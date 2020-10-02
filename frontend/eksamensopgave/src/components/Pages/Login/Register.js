@@ -80,7 +80,7 @@ function Register () {
                             </div>
                             <div className="form-group">
                                 <label>Password</label>
-                                <input type="text" className="form-control" required onChange={(e) => setBruger({ ...bruger, password: e.target.value })}/>
+                                <input type="password" className="form-control" required onChange={(e) => setBruger({ ...bruger, password: e.target.value })}/>
                             </div>
                             <button type="submit" className="btn btn-black w-100 mb-2">Opret bruger</button>
                         </form> 

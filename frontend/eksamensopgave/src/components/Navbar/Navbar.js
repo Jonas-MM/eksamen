@@ -48,7 +48,7 @@ const Header = () => {
                 setLoggedin(userData.data.login_godkendt);
                 setBruger(userData.data);
             }
-            }, [logout]);
+            }, []);
 
         function handleChange(e) {
             setSearchTerm(e.target.value)
@@ -68,7 +68,7 @@ const Header = () => {
         function logout(){
             if(window.confirm("Er du sikker på at du vil loggge ud?")){
                 localStorage.removeItem("bruger");
-                
+                window.location.reload(false);
             }
         }
 
@@ -81,7 +81,7 @@ const Header = () => {
      
     return(
 
-        <header>
+        <header id="header">
                 <nav className="container-fluid navbarCon ">
                 <Row>
 
@@ -96,7 +96,7 @@ const Header = () => {
                             <Navbar.Collapse id="basic-navbar-nav">
                                 <Nav className="mx-auto linksCon">
                                     <div className="row">
-                                        <div className="col-lg-12">
+                                        <div className="col-lg-12 ulCon">
                                             <ul className="d-flex align-items-center ">
                                                 <li>
                                                     <NavLink to="/" className="px-3">FORSIDE</NavLink>
@@ -123,6 +123,9 @@ const Header = () => {
                                                     )
                                                     }
                                                 </li>
+                                                <li>
+                                                    <NavLink to="rediger" className="d-lg-none"> Rediger profil </NavLink>
+                                                </li>
                                                 <form action="" className="searchForm" >
                                                     <img src="../../Images/searchIcon.png" alt="searchIcon" className="searchIcon"/>
                                                     <input type="text" onChange={handleChange} />
@@ -131,10 +134,22 @@ const Header = () => {
                                                     </ul>
                                                 </form>
                                             </ul>
+                                           
                                         </div>
                                     </div>
 
                                 </Nav>
+                                        {loggedin ? 
+                                                (
+                                                    <NavLink to="/rediger" className="editProfile d-none d-lg-block" >
+                                                        <img src="https://img.icons8.com/flat_round/64/000000/settings--v1.png"/>
+                                                    </NavLink>
+                                                )
+                                                :
+                                                (
+                                                    ""
+                                                )
+                                                }
                             </Navbar.Collapse>
                         </Navbar>
                     </div>

@@ -16,8 +16,17 @@
       color: lightblue;
       font-weight: 500;
     }
-
   }
+    .editProfile{
+      position: absolute;
+      right: 0%;
+      top: 45%;
+      transform: translate(-50%, -50%);
+      img{
+        width: 35px;
+        height: width;
+      }
+    }
 }
 ul li {
     list-style: none;
@@ -110,6 +119,11 @@ h1{
 
 
 @media only screen and (max-width: 992px) {
+  .logout-button{
+    padding-left: 0 !important;
+    margin-left: 0;
+    text-align: left;
+  }
   .searchForm{
     padding-left: 10%;
     img {
