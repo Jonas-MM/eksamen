@@ -22,7 +22,6 @@ function App() {
   return (
       <BrowserRouter>
         <div className="App">
-          {/* <Home /> */}
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
